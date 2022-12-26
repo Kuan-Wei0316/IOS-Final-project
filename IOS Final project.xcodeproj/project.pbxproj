@@ -11,6 +11,9 @@
 		49C9F21529598191007274CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F21429598191007274CC /* ContentView.swift */; };
 		49C9F2172959819A007274CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C9F2162959819A007274CC /* Assets.xcassets */; };
 		49C9F21A2959819A007274CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C9F2192959819A007274CC /* Preview Assets.xcassets */; };
+		49C9F223295982EE007274CC /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F222295982EE007274CC /* Cafe.swift */; };
+		49C9F227295987E5007274CC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F226295987E5007274CC /* City.swift */; };
+		49C9F22A29598806007274CC /* CafeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F22929598806007274CC /* CafeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		49C9F2162959819A007274CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C9F2192959819A007274CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49C9F21B2959819A007274CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C9F222295982EE007274CC /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		49C9F226295987E5007274CC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		49C9F22929598806007274CC /* CafeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,12 @@
 			children = (
 				49C9F21229598191007274CC /* IOS_Final_projectApp.swift */,
 				49C9F21429598191007274CC /* ContentView.swift */,
+				49C9F222295982EE007274CC /* Cafe.swift */,
 				49C9F2162959819A007274CC /* Assets.xcassets */,
 				49C9F21B2959819A007274CC /* Info.plist */,
 				49C9F2182959819A007274CC /* Preview Content */,
+				49C9F226295987E5007274CC /* City.swift */,
+				49C9F22929598806007274CC /* CafeList.swift */,
 			);
 			path = "IOS Final project";
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 			files = (
 				49C9F21529598191007274CC /* ContentView.swift in Sources */,
 				49C9F21329598191007274CC /* IOS_Final_projectApp.swift in Sources */,
+				49C9F227295987E5007274CC /* City.swift in Sources */,
+				49C9F223295982EE007274CC /* Cafe.swift in Sources */,
+				49C9F22A29598806007274CC /* CafeList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

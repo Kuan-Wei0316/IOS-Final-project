@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedIndex=0
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView() {
+            City(selectedIndex: $selectedIndex)
+                .tabItem{
+                    Label("\(selectedIndex)",systemImage: "house.fill")
+                }
+            NavigationView{
+                CafeList(selectedIndex: $selectedIndex)
+            }
+            .tabItem{
+                Label("Teams",systemImage: "sportscourt.fill")
+            }
+        }
     }
 }
 
