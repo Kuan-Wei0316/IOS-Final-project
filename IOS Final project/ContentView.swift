@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var selectedIndex=0
     @State var cafeResult=CafeResult(data: [Cafe]())
+    @State var poemResult=PoemResult(data: [Poem]())
     
     var body: some View {
         TabView() {
@@ -17,9 +18,7 @@ struct ContentView: View {
                 .tabItem{
                     Label("\(selectedIndex)",systemImage: "house.fill")
                 }
-            NavigationView{
-                CafeList(selectedIndex: $selectedIndex, cafeResult: $cafeResult)
-            }
+            DrawPoem(poemResult: $poemResult)
             .tabItem{
                 Label("Teams",systemImage: "sportscourt.fill")
             }

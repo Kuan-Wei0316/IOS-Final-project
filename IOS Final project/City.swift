@@ -29,24 +29,59 @@ struct City: View {
             
         }
     }
+    struct GrowingButton: ButtonStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            configuration.label
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+                .scaleEffect(configuration.isPressed ? 1.2 : 1)
+                .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+        }
+    }
     @Binding var selectedIndex: Int
     var body: some View {
         VStack{
+            CafeList(selectedIndex: $selectedIndex, cafeResult: $cafeResult)
             Picker(selection: $selectedIndex, label: Text("選擇角色")) {
                 ForEach(chiCitys.indices){ item in
                     Text(chiCitys[item])
                 }
             }
-            Text("\(selectedIndex)")
             Button(action: {fetchCafe()}, label: {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                Text("搜尋")
             })
-            //testView(cafeResult: $cafeResult)
-
+            .buttonStyle(GrowingButton())
+            
         }
         
     }
     
+}
+struct CafeList: View {
+    @Binding var selectedIndex: Int
+    @Binding var cafeResult: CafeResult
+    @State var index: Int=0
+    var body: some View {
+        NavigationView{
+            List{
+                ForEach(self.cafeResult.data){item in
+                    NavigationLink(
+                        destination:
+                            CafeDetail(name: item.name,city: item.city,cheap: item.cheap,address: item.address,wifi: item.wifi,socket: item.socket,open_time: item.open_time,limited_time: item.limited_time),
+                        label: {
+                            VStack(alignment: .leading){
+                                Text(item.name)
+                                Text(item.city)
+                            }
+                        })
+                }
+            }
+            .navigationTitle("咖啡廳列表")
+        }
+        
+    }
 }
 struct testView: View {
     @Binding var cafeResult:CafeResult

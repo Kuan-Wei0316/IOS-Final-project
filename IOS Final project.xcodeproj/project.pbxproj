@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4984D53B295AC9B0000B1AEE /* CafeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984D53A295AC9B0000B1AEE /* CafeDetail.swift */; };
+		4984D53F295AFB90000B1AEE /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984D53E295AFB90000B1AEE /* Poem.swift */; };
+		4984D542295B0B12000B1AEE /* DrawPoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4984D541295B0B12000B1AEE /* DrawPoem.swift */; };
 		49C9F21329598191007274CC /* IOS_Final_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F21229598191007274CC /* IOS_Final_projectApp.swift */; };
 		49C9F21529598191007274CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F21429598191007274CC /* ContentView.swift */; };
 		49C9F2172959819A007274CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C9F2162959819A007274CC /* Assets.xcassets */; };
 		49C9F21A2959819A007274CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C9F2192959819A007274CC /* Preview Assets.xcassets */; };
 		49C9F223295982EE007274CC /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F222295982EE007274CC /* Cafe.swift */; };
 		49C9F227295987E5007274CC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F226295987E5007274CC /* City.swift */; };
-		49C9F22A29598806007274CC /* CafeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9F22929598806007274CC /* CafeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4984D53A295AC9B0000B1AEE /* CafeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetail.swift; sourceTree = "<group>"; };
+		4984D53E295AFB90000B1AEE /* Poem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
+		4984D541295B0B12000B1AEE /* DrawPoem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawPoem.swift; sourceTree = "<group>"; };
 		49C9F20F29598190007274CC /* IOS Final project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Final project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C9F21229598191007274CC /* IOS_Final_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_Final_projectApp.swift; sourceTree = "<group>"; };
 		49C9F21429598191007274CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,7 +30,6 @@
 		49C9F21B2959819A007274CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49C9F222295982EE007274CC /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		49C9F226295987E5007274CC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		49C9F22929598806007274CC /* CafeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,9 @@
 				49C9F21B2959819A007274CC /* Info.plist */,
 				49C9F2182959819A007274CC /* Preview Content */,
 				49C9F226295987E5007274CC /* City.swift */,
-				49C9F22929598806007274CC /* CafeList.swift */,
 				4984D53A295AC9B0000B1AEE /* CafeDetail.swift */,
+				4984D53E295AFB90000B1AEE /* Poem.swift */,
+				4984D541295B0B12000B1AEE /* DrawPoem.swift */,
 			);
 			path = "IOS Final project";
 			sourceTree = "<group>";
@@ -152,9 +155,10 @@
 			files = (
 				49C9F21529598191007274CC /* ContentView.swift in Sources */,
 				49C9F21329598191007274CC /* IOS_Final_projectApp.swift in Sources */,
+				4984D542295B0B12000B1AEE /* DrawPoem.swift in Sources */,
 				49C9F227295987E5007274CC /* City.swift in Sources */,
 				49C9F223295982EE007274CC /* Cafe.swift in Sources */,
-				49C9F22A29598806007274CC /* CafeList.swift in Sources */,
+				4984D53F295AFB90000B1AEE /* Poem.swift in Sources */,
 				4984D53B295AC9B0000B1AEE /* CafeDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
