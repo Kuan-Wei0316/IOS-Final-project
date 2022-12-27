@@ -31,6 +31,14 @@ struct CafeDetail: View {
                 Text("地址")
                 Text(address)
             }
+            Section{
+                Text("價格")
+                Text("\(cheap)")
+            }
+            Section{
+                Text("網路")
+                Text("\(wifi)")
+            }
 //            Text(cheap)
             
 //            Text(wifi)
