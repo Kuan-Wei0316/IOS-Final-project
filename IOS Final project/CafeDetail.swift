@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CafeDetail: View {
-    @Binding var cafeResult: CafeResult
-    @Binding var index: Int
+    //@Binding var cafeResultData: Cafe
+    var name: String
+//    @Binding var index: Int
     var body: some View {
-        Text(cafeResult.data[index].name)
+        Text(name)
     }
 }
 

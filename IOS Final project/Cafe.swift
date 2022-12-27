@@ -11,9 +11,10 @@ struct CafeResult: Codable {
     let data: [Cafe]
 }
 
-struct Cafe: Codable {
-    let name: String
-    let city: String
+struct Cafe:Identifiable, Codable {
+    let id = UUID()
+    var name: String
+    var city: String
 //    let cheap: Double
 //    let address: String
 //    let wifi: Double
