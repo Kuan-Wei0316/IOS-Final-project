@@ -12,7 +12,7 @@ let engCitys=["","taipei","taoyuan","taichung","tainan","kaohsiung","hsinchu","m
 let apiUrlString="https://kuan-wei0316.github.io/api-page/cafes.json"
 struct City: View {
     @State var cafes = [Cafe]()
-    @State var cafeResult=CafeResult(data: [Cafe]())
+    @Binding var cafeResult: CafeResult
     func fetchCafe() {
         if let urlStr = (apiUrlString).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed){
             if let url=URL(string: urlStr){
@@ -41,7 +41,7 @@ struct City: View {
             Button(action: {fetchCafe()}, label: {
                 /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
             })
-            testView(cafeResult: $cafeResult)
+            //testView(cafeResult: $cafeResult)
 
         }
         
@@ -55,7 +55,7 @@ struct testView: View {
         if cafeResult.data.isEmpty{
             Text("empty")
         }else{
-            Text("\(cafeResult.data[1111].name)")
+            Text("\(cafeResult.data[666].name)")
         }
     }
 }

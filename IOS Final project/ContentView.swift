@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedIndex=0
-    
+    @State var cafeResult=CafeResult(data: [Cafe]())
     
     var body: some View {
         TabView() {
-            City(selectedIndex: $selectedIndex)
+            City(cafeResult: $cafeResult, selectedIndex: $selectedIndex)
                 .tabItem{
                     Label("\(selectedIndex)",systemImage: "house.fill")
                 }
             NavigationView{
-                CafeList(selectedIndex: $selectedIndex)
+                CafeList(selectedIndex: $selectedIndex, cafeResult: $cafeResult)
             }
             .tabItem{
                 Label("Teams",systemImage: "sportscourt.fill")
