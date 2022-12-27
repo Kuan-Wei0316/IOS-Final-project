@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CafeDetail: View {
+    @Binding var cafeResult: CafeResult
+    @Binding var index: Int
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(cafeResult.data[index].name)
     }
 }
 
-struct CafeDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        CafeDetail()
-    }
-}
+//struct CafeDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CafeDetail()
+//    }
+//}

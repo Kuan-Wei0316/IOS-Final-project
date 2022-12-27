@@ -12,6 +12,7 @@ import SwiftUI
 struct CafeList: View {
     @Binding var selectedIndex: Int
     @Binding var cafeResult: CafeResult
+    @State var index: Int=0
 //    func fetchCafe(){
 //        if let urlStr = (apiUrlString + "/" + engCitys[selectedIndex]).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
 //            let url = URL(string: urlStr){
@@ -46,22 +47,22 @@ struct CafeList: View {
     
     var body: some View {
         NavigationView{
-            VStack{
-                List{
-                    ForEach(cafeResult.data.indices){item in
-                        NavigationLink(
-                            destination: CafeDetail(),
-                            label: {
-                                VStack(alignment: .leading){
-                                    Text(cafeResult.data[item].name)
-                                    Text(cafeResult.data[item].city)
-                                }
-                            })
-                    }
+            List{
+                ForEach(cafeResult.data.indices){index in
+                    NavigationLink(
+                        destination: CafeDetail(cafeResult: $cafeResult,index: $index),
+                        label: {
+                            VStack(alignment: .leading){
+                                Text(cafeResult.data[index].name)
+                                Text(cafeResult.data[index].city)
+                            }
+                        })
                 }
             }
-            .padding(.bottom)
+            .navigationTitle("咖啡廳列表")
+            Spacer()
         }
+        Spacer()
         
     }
 }
