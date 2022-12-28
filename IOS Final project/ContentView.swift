@@ -16,11 +16,11 @@ struct ContentView: View {
         TabView() {
             City(cafeResult: $cafeResult, selectedIndex: $selectedIndex)
                 .tabItem{
-                    Label("\(selectedIndex)",systemImage: "house.fill")
+                    Label("咖啡廳",systemImage: "star.fill")
                 }
             DrawPoem(poemResult: $poemResult)
             .tabItem{
-                Label("Teams",systemImage: "sportscourt.fill")
+                Label("淺草籤",systemImage:"heart.fill")
             }
         }
     }

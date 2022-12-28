@@ -8,13 +8,14 @@
 import SwiftUI
 
 let chiCitys=["全台","臺北市","桃園市","臺中市","臺南市","高雄市","新竹縣","苗栗縣","彰化縣","南投縣","雲林縣","嘉義縣","屏東縣","宜蘭縣","花蓮縣","臺東縣","澎湖縣","金門縣","連江縣","基隆市"]
-let engCitys=["","taipei","taoyuan","taichung","tainan","kaohsiung","hsinchu","miaoli","changhua","nantou","yunlin","chiayi","pingtung","yilan","hualien","taitung","penghu","kinmen","lienchiang","keelung"]
-let apiUrlString="https://kuan-wei0316.github.io/api-page/cafes.json"
+let engCitys=["cafes","taipei","taoyuan","taichung","tainan","kaohsiung","hsinchu","miaoli","changhua","nantou","yunlin","chiayi","pingtung","yilan","hualien","taitung","penghu","kinmen","lienchiang","keelung"]
+let apiUrlString="https://kuan-wei0316.github.io/api-page"
 struct City: View {
     @State var cafes = [Cafe]()
     @Binding var cafeResult: CafeResult
+    @Binding var selectedIndex: Int
     func fetchCafe() {
-        if let urlStr = (apiUrlString).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed){
+        if let urlStr = "\(apiUrlString)/\(engCitys[selectedIndex]).json".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed){
             if let url=URL(string: urlStr){
                 URLSession.shared.dataTask(with: url){ (data, response, error) in
                     let decoder = JSONDecoder()
@@ -40,7 +41,7 @@ struct City: View {
                 .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
         }
     }
-    @Binding var selectedIndex: Int
+
     var body: some View {
         VStack{
             CafeList(selectedIndex: $selectedIndex, cafeResult: $cafeResult)

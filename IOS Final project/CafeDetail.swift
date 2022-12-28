@@ -33,11 +33,23 @@ struct CafeDetail: View {
             }
             Section{
                 Text("價格")
-                Text("\(cheap)")
+                Text("\(cheap,specifier:"%.1f")")
             }
             Section{
                 Text("網路")
-                Text("\(wifi)")
+                Text("\(wifi,specifier:"%.1f")")
+            }
+            Section{
+                Text("插座")
+                Text(socket)
+            }
+            Section{
+                Text("營業時間")
+                Text(open_time)
+            }
+            Section{
+                Text("限制時間")
+                Text(limited_time)
             }
 //            Text(cheap)
             
